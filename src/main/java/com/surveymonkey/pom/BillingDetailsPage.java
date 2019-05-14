@@ -1,15 +1,18 @@
 package com.surveymonkey.pom;
+import org.apache.log4j.Logger;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.testng.Assert;
 import org.testng.Reporter;
 
 public class BillingDetailsPage {
+	
+	private static Logger log = Logger.getLogger(BillingDetailsPage.class.getName());
 
-	@FindBy(xpath="//span[contains(text(),'PREMIER')]")
+	@FindBy(xpath="//dt[contains(text(),'Plan Type')]")
 	static WebElement planType ;
 
-	@FindBy(xpath="//span[contains(text(),'₨ 59,988')]")
+	@FindBy(xpath="//dd[@class='billing-next-amount']//span")
 	static WebElement BillingAmount ;
 
 	/**
@@ -24,15 +27,15 @@ public class BillingDetailsPage {
 		Assert.assertTrue( planType.isDisplayed());
 		Reporter.log( planType.getText());
 		if(premierPlanType==planType.getText()) {
-			Reporter.log("Same Plan Type", true);
+		log.info("Same Plan Type");
 		}else {
-			Reporter.log("Plan Type is not same");
+		log.info("Plan Type is not same");
 		}
 		Assert.assertTrue(BillingAmount.isDisplayed());
 		if(totalBilling==BillingAmount.getText()) {
-			Reporter.log("total Billing is same ", true);
+			log.info("Billing Amount is not same");
 		}else {
-			Reporter.log("total Billing is not same");
+			log.info("Billing Amount is same");
 		}
 	}
 }

@@ -1,10 +1,12 @@
 package com.surveymonkey.pom;
+import org.apache.log4j.Logger;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.testng.Assert;
-import org.testng.Reporter;
 
 public class HomePage {
+
+	private static Logger log = Logger.getLogger(HomePage.class.getName());
 
 	static String baseurl = "https://www.monkeytest1.com";
 
@@ -19,9 +21,9 @@ public class HomePage {
 	 *  
 	 */	
 
-	public static void navigateToHomePage(){
+	public static void verifyHomePage(){
 		Assert.assertTrue(SignupElement.isDisplayed());
-		Reporter.log("Navigated to Home Page", true);	
+		log.info("Home Page is dispalyed");
 	}
 
 	/**
@@ -34,7 +36,6 @@ public class HomePage {
 	public static void navigateToSignUp(){
 		SignupElement.click();
 		Assert.assertTrue(SignupPage.usernameTextBox.isDisplayed());
-		Reporter.log("Navigated to Signup Page and Username Text Box is displayed", true);	
-
+		log.info("Navigated to Signup Page and Username Text Box is displayed");
 	}			
 }

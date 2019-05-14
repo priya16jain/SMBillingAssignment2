@@ -1,10 +1,12 @@
 package com.surveymonkey.pom;
+import org.apache.log4j.Logger;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.testng.Assert;
-import org.testng.Reporter;
 
-public class SignupPage {
+public class SignupPage {	
+
+	private static Logger log = Logger.getLogger(SignupPage.class.getName());
 
 	@FindBy(id="username")
 	static WebElement usernameTextBox;
@@ -37,19 +39,19 @@ public class SignupPage {
 		Assert.assertTrue(usernameTextBox.isDisplayed());
 		usernameTextBox.clear();
 		usernameTextBox.sendKeys(username);
-		Reporter.log("Enter Username", true);
+		log.info("Enter Username");
 		passwordTextBox.clear();
 		passwordTextBox.sendKeys(password);
-		Reporter.log("Enter Password", true);
+		log.info("Enter Password");
 		EmailTextBox.clear();
 		EmailTextBox.sendKeys(email);
-		Reporter.log("Enter email", true);
+		log.info("Enter email");
 		firstnameTextBox.clear();
 		firstnameTextBox.sendKeys(firstname);
-		Reporter.log("Enter firstname", true);
+		log.info("Enter firstname");
 		lastnameTextBox.clear();
 		firstnameTextBox.sendKeys(lastname);
-		Reporter.log("Enter lastname", true);
+		log.info("Enter lastname");
 
 	}
 
@@ -64,6 +66,6 @@ public class SignupPage {
 	public static void signUpButton()
 	{
 		SignUpButton.click();
-		Reporter.log("Clicked Signup Button", true);
+		log.info("Clicked Signup Button");
 	}
 }

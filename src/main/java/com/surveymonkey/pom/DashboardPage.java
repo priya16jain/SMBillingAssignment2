@@ -1,11 +1,12 @@
 package com.surveymonkey.pom;
-
+import org.apache.log4j.Logger;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.testng.Assert;
-import org.testng.Reporter;
 
 public class DashboardPage {
+	
+	private static Logger log = Logger.getLogger(DashboardPage.class.getName());
 
 	@FindBy(xpath = "//a[contains(text(),'Plans & Pricing')]")
 	static WebElement plansAndPricingOption ;
@@ -24,34 +25,27 @@ public class DashboardPage {
 	 * @return void
 	 *  
 	 */
-	public static void clickPlansAndPricingOption()
-	{
-		try {
-			Thread.sleep(5000);
-		} catch (InterruptedException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
+	public static void clickPlansAndPricingOption(){
+		CommonUtils.waitForElementToBeVisible(plansAndPricingOption);
+		CommonUtils.waitForElementToBeClickable(plansAndPricingOption);
 		plansAndPricingOption.click();
-		Reporter.log("Click on plans And Pricing Option", true);
+		log.info("Click on plans And Pricing Option");
 	}
 	/**
 	 * This method will click Main Menu.
 	 * 
 	 * @param  void
 	 * @return void
+	 * @throws InterruptedException 
 	 *  
 	 */
-	public static void clickMainMenu(){
-		try {
-			Thread.sleep(2000);
-		} catch (InterruptedException e) {
-
-			e.printStackTrace();
-		}
+	public static void clickMainMenu() throws InterruptedException{
+		Thread.sleep(2000);
+		CommonUtils.waitForElementToBeVisible(MainMenu);
+		CommonUtils.waitForElementToBeClickable(MainMenu);
 		Assert.assertTrue(MainMenu.isDisplayed());
 		MainMenu.click();
-		Reporter.log("Click on MainMenu", true);
+		log.info("Click on MainMenu");
 	}
 
 	/**
@@ -60,18 +54,16 @@ public class DashboardPage {
 	 * 
 	 * @param  void
 	 * @return void
+	 * @throws InterruptedException 
 	 *  
 	 */
-	public static void clickMyAccountOption(){
-		try {
-			Thread.sleep(2000);
-		} catch (InterruptedException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
-		Assert.assertTrue(MainMenu.isDisplayed());
+	public static void clickMyAccountOption() throws InterruptedException{
+		Thread.sleep(2000);
+		Assert.assertTrue(myAccountOption.isDisplayed());
+		CommonUtils.waitForElementToBeVisible(myAccountOption);
+		CommonUtils.waitForElementToBeClickable(myAccountOption);
 		myAccountOption.click();
-		Reporter.log("Click on  my Account Option", true);
+		log.info("Click on  my Account Option");
 	}
 }
 

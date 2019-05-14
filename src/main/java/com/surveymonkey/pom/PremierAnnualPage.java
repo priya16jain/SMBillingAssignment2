@@ -1,10 +1,11 @@
 package com.surveymonkey.pom;
-
+import org.apache.log4j.Logger;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
-import org.testng.Reporter;
 
 public class PremierAnnualPage {
+
+	private static Logger log = Logger.getLogger(PremierAnnualPage.class.getName());
 
 	@FindBy(name="first_name")
 	static WebElement firstNameTextBox;
@@ -28,7 +29,7 @@ public class PremierAnnualPage {
 	static WebElement creditCardNumber;
 
 	@FindBy(name="credit_card_verification")
-	static WebElement creditCardVerification ;
+	static WebElement securityCode ;
 
 	@FindBy(name="expiry_date")
 	static WebElement expiryDate;
@@ -52,16 +53,16 @@ public class PremierAnnualPage {
 	{	
 		firstNameTextBox.clear();
 		firstNameTextBox.sendKeys(firstname);
-		Reporter.log("Entered firstname", true);
+		log.info("Entered firstname");
 		lastNameTextBox.clear();
 		lastNameTextBox.sendKeys(lastname);
-		Reporter.log("Entered lastname", true);
+		log.info("Entered lastname");
 		subdivisionDropdown.click();
-		Reporter.log("Click on Dropdown of States", true);
+		log.info("Click on Dropdown of States");
 		stateOption.click();
-		Reporter.log("Click on States Options", true);
+		log.info("Click on States Options");
 		NextButton.click();
-		Reporter.log("Click on Next Button", true);	
+		log.info("Click on Next Button");
 	}
 
 	/**
@@ -72,30 +73,25 @@ public class PremierAnnualPage {
 	 * @return void
 	 *  
 	 */
-	public static void enterCardDetails( String nameoncreditcard, String creditcardnumber, String creditCardVerificationNumber, String expiryDateOfCard  )
+	public static void enterCardDetails( String nameoncreditcard, String creditcardnumber, String expiryDateOfCard, String creditCardVerificationNumber )
 	{
 		nameOnCard.clear();
 		nameOnCard.sendKeys(nameoncreditcard);
-		Reporter.log("Entered name on credit card", true);
+		log.info("Entered name on credit card`");
 		creditCardNumber.clear();
 		creditCardNumber.sendKeys(creditcardnumber);
-		Reporter.log("Entered credit Card Number", true);
-		creditCardVerification.clear();
-		creditCardVerification.sendKeys(creditCardVerificationNumber);
-		Reporter.log("Entered credit Card Verification Number", true);
+		log.info("Entered credit Card Number");
 		expiryDate.clear();
 		expiryDate.sendKeys(expiryDateOfCard);
-		Reporter.log("Entered expiryDate", true);
+		log.info("Entered expiryDate");
+		securityCode.clear();
+		securityCode.sendKeys(creditCardVerificationNumber);
+		log.info("Entered credit Card Verification Number");
 		NextButton.click();
-		Reporter.log("Click on Next Button", true);
-		try {
-			Thread.sleep(2000);
-		} catch (InterruptedException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
+		log.info("Click on Next Button");
+		CommonUtils.waitForElementToBeVisible(ConfirmButton);
 		ConfirmButton.click();
-		Reporter.log("Click on Confirm Button", true);
+		log.info("Click on Confirm Button");
 	}
 
 	/**

@@ -1,11 +1,13 @@
 package com.surveymonkey.pom;
+import org.apache.log4j.Logger;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
-import org.testng.Reporter;
 
 public class PopUpPage {
+	
+	private static Logger log = Logger.getLogger(PopUpPage.class.getName());
 
-	@FindBy(xpath = "//a[@class='linkClose']//span")
+	@FindBy(xpath = "//a[@class='linkClose']")
 	static WebElement closeOption;
 	/**
 	 * This method will select individual Plan .
@@ -13,18 +15,15 @@ public class PopUpPage {
 	 * 
 	 * @param void 
 	 * @return void
+	 * @throws InterruptedException 
 	 *  
 	 */
-	public static void closePopUp()
+	public static void closePopUp() throws InterruptedException
 	{
-		try {
-			Thread.sleep(7000);
-		} catch (InterruptedException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
+		Thread.sleep(5000);
+		//CommonUtils.waitForElementToBeVisible(closeOption);
 		closeOption.click();
-		Reporter.log("Clicked close Option", true);
+        log.info("Clicked close Option");
 
 	}
 }

@@ -1,10 +1,11 @@
 package com.surveymonkey.pom;
-
+import org.apache.log4j.Logger;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
-import org.testng.Reporter;
+
 
 public class MyAccountPage {
+	private static Logger log = Logger.getLogger(MyAccountPage.class.getName());
 
 	@FindBy(xpath = "//a[@href='/billing/']")
 	static WebElement billingDetails ;
@@ -18,14 +19,10 @@ public class MyAccountPage {
 	 */		
 	public static void clickbillingDetailsOptions ()
 	{
-		try {
-			Thread.sleep(5000);
-		} catch (InterruptedException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
+		CommonUtils.waitForElementToBeVisible(billingDetails);
+		CommonUtils.waitForElementToBeClickable(billingDetails);
 		billingDetails .click();
-		Reporter.log("billing Details Option", true);
+		log.info("billing Details Option");
 	}
 
 }

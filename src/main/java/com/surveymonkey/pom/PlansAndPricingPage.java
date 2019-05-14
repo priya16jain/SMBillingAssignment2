@@ -1,10 +1,11 @@
 package com.surveymonkey.pom;
-
+import org.apache.log4j.Logger;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
-import org.testng.Reporter;
 
 public class PlansAndPricingPage {
+	
+	private static Logger log = Logger.getLogger(PlansAndPricingPage.class.getName());
 
     @FindBy(xpath="//a[contains(text(),'Individual Plans')]")
 	static WebElement individualPlansAction;
@@ -24,14 +25,9 @@ public class PlansAndPricingPage {
 	 */
 	public static void clickIndividualPlansAction()
 	{
-		try {
-			Thread.sleep(5000);
-		} catch (InterruptedException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
+		CommonUtils.waitForElementToBeVisible(individualPlansAction);
 		individualPlansAction.click();
-		Reporter.log("individual Plans Action Option", true);
+		log.info("individual Plans Action Option");
 	}
 	
 	/**
@@ -44,14 +40,9 @@ public class PlansAndPricingPage {
 	 */
 	public static void selectPlan()
 	{
-		try {
-			Thread.sleep(5000);
-		} catch (InterruptedException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
+		CommonUtils.waitForElementToBeVisible(selectPlan);
 		selectPlan.click();
-		Reporter.log("select Plan", true);
+		log.info("select Plan");
 	}
 
 	/**

@@ -2,209 +2,29 @@
 <testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
   <reporter-output>
     <line>
-      <![CDATA[Navigated to Home Page]]>
-    </line>
-    <line>
-      <![CDATA[Navigated to Home Page]]>
-    </line>
-    <line>
-      <![CDATA[Navigated to Signup Page and Username Text Box is displayed]]>
-    </line>
-    <line>
-      <![CDATA[Enter Username]]>
-    </line>
-    <line>
-      <![CDATA[Enter Password]]>
-    </line>
-    <line>
-      <![CDATA[Enter email]]>
-    </line>
-    <line>
-      <![CDATA[Enter firstname]]>
-    </line>
-    <line>
-      <![CDATA[Enter lastname]]>
-    </line>
-    <line>
-      <![CDATA[Clicked Signup Button]]>
-    </line>
-    <line>
-      <![CDATA[Clicked close Option]]>
-    </line>
-    <line>
-      <![CDATA[Click on plans And Pricing Option]]>
-    </line>
-    <line>
-      <![CDATA[individual Plans Action Option]]>
-    </line>
-    <line>
-      <![CDATA[select Plan]]>
-    </line>
-    <line>
-      <![CDATA[Entered firstname]]>
-    </line>
-    <line>
-      <![CDATA[Entered lastname]]>
-    </line>
-    <line>
-      <![CDATA[Click on Dropdown of States]]>
-    </line>
-    <line>
-      <![CDATA[Click on States Options]]>
-    </line>
-    <line>
-      <![CDATA[Click on Next Button]]>
-    </line>
-    <line>
-      <![CDATA[Entered name on credit card]]>
-    </line>
-    <line>
-      <![CDATA[Entered credit Card Number]]>
-    </line>
-    <line>
-      <![CDATA[Entered credit Card Verification Number]]>
-    </line>
-    <line>
-      <![CDATA[Entered expiryDate]]>
-    </line>
-    <line>
-      <![CDATA[Click on Next Button]]>
-    </line>
-    <line>
-      <![CDATA[Click on Confirm Button]]>
-    </line>
-    <line>
-      <![CDATA[Clicked go To Dashboard Button]]>
-    </line>
-    <line>
-      <![CDATA[Click on MainMenu]]>
-    </line>
-    <line>
-      <![CDATA[Click on  my Account Option]]>
-    </line>
-    <line>
-      <![CDATA[billing Details Option]]>
-    </line>
-    <line>
-      <![CDATA[PREMIER ANNUAL]]>
-    </line>
-    <line>
-      <![CDATA[Plan Type is not same]]>
-    </line>
-    <line>
-      <![CDATA[total Billing is not same]]>
+      <![CDATA[Plan Type:]]>
     </line>
     <line>
       <![CDATA[Closed browser]]>
     </line>
   </reporter-output>
-  <suite name="Default suite" duration-ms="150109" started-at="2019-05-10T11:52:17Z" finished-at="2019-05-10T11:54:47Z">
+  <suite name="Default suite" duration-ms="155516" started-at="2019-05-14T11:55:06Z" finished-at="2019-05-14T11:57:41Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="150109" started-at="2019-05-10T11:52:17Z" finished-at="2019-05-10T11:54:47Z">
+    <test name="Default test" duration-ms="155516" started-at="2019-05-14T11:55:06Z" finished-at="2019-05-14T11:57:41Z">
       <class name="com.surveymonkey.testcases.PaidPlanForUser">
-        <test-method status="PASS" signature="testSetup()[pri:0, instance:com.surveymonkey.testcases.PaidPlanForUser@39aeed2f]" name="testSetup" is-config="true" duration-ms="16620" started-at="2019-05-10T11:52:17Z" finished-at="2019-05-10T11:52:34Z">
+        <test-method status="PASS" signature="testSetup()[pri:0, instance:com.surveymonkey.testcases.PaidPlanForUser@c038203]" name="testSetup" is-config="true" duration-ms="22946" started-at="2019-05-14T11:55:06Z" finished-at="2019-05-14T11:55:29Z">
           <reporter-output>
-            <line>
-              <![CDATA[Navigated to Home Page]]>
-            </line>
           </reporter-output>
         </test-method> <!-- testSetup -->
-        <test-method status="PASS" signature="verifyPaidPlanForUser()[pri:1, instance:com.surveymonkey.testcases.PaidPlanForUser@39aeed2f]" name="verifyPaidPlanForUser" duration-ms="131337" started-at="2019-05-10T11:52:34Z" finished-at="2019-05-10T11:54:45Z">
+        <test-method status="PASS" signature="verifyPaidPlanForUser()[pri:0, instance:com.surveymonkey.testcases.PaidPlanForUser@c038203]" name="verifyPaidPlanForUser" duration-ms="130461" started-at="2019-05-14T11:55:29Z" finished-at="2019-05-14T11:57:39Z">
           <reporter-output>
             <line>
-              <![CDATA[Navigated to Home Page]]>
-            </line>
-            <line>
-              <![CDATA[Navigated to Signup Page and Username Text Box is displayed]]>
-            </line>
-            <line>
-              <![CDATA[Enter Username]]>
-            </line>
-            <line>
-              <![CDATA[Enter Password]]>
-            </line>
-            <line>
-              <![CDATA[Enter email]]>
-            </line>
-            <line>
-              <![CDATA[Enter firstname]]>
-            </line>
-            <line>
-              <![CDATA[Enter lastname]]>
-            </line>
-            <line>
-              <![CDATA[Clicked Signup Button]]>
-            </line>
-            <line>
-              <![CDATA[Clicked close Option]]>
-            </line>
-            <line>
-              <![CDATA[Click on plans And Pricing Option]]>
-            </line>
-            <line>
-              <![CDATA[individual Plans Action Option]]>
-            </line>
-            <line>
-              <![CDATA[select Plan]]>
-            </line>
-            <line>
-              <![CDATA[Entered firstname]]>
-            </line>
-            <line>
-              <![CDATA[Entered lastname]]>
-            </line>
-            <line>
-              <![CDATA[Click on Dropdown of States]]>
-            </line>
-            <line>
-              <![CDATA[Click on States Options]]>
-            </line>
-            <line>
-              <![CDATA[Click on Next Button]]>
-            </line>
-            <line>
-              <![CDATA[Entered name on credit card]]>
-            </line>
-            <line>
-              <![CDATA[Entered credit Card Number]]>
-            </line>
-            <line>
-              <![CDATA[Entered credit Card Verification Number]]>
-            </line>
-            <line>
-              <![CDATA[Entered expiryDate]]>
-            </line>
-            <line>
-              <![CDATA[Click on Next Button]]>
-            </line>
-            <line>
-              <![CDATA[Click on Confirm Button]]>
-            </line>
-            <line>
-              <![CDATA[Clicked go To Dashboard Button]]>
-            </line>
-            <line>
-              <![CDATA[Click on MainMenu]]>
-            </line>
-            <line>
-              <![CDATA[Click on  my Account Option]]>
-            </line>
-            <line>
-              <![CDATA[billing Details Option]]>
-            </line>
-            <line>
-              <![CDATA[PREMIER ANNUAL]]>
-            </line>
-            <line>
-              <![CDATA[Plan Type is not same]]>
-            </line>
-            <line>
-              <![CDATA[total Billing is not same]]>
+              <![CDATA[Plan Type:]]>
             </line>
           </reporter-output>
         </test-method> <!-- verifyPaidPlanForUser -->
-        <test-method status="PASS" signature="testTearDown()[pri:0, instance:com.surveymonkey.testcases.PaidPlanForUser@39aeed2f]" name="testTearDown" is-config="true" duration-ms="2117" started-at="2019-05-10T11:54:45Z" finished-at="2019-05-10T11:54:47Z">
+        <test-method status="PASS" signature="testTearDown()[pri:0, instance:com.surveymonkey.testcases.PaidPlanForUser@c038203]" name="testTearDown" is-config="true" duration-ms="2068" started-at="2019-05-14T11:57:39Z" finished-at="2019-05-14T11:57:41Z">
           <reporter-output>
             <line>
               <![CDATA[Closed browser]]>

@@ -1,0 +1,50 @@
+2019-05-14 17:25:31 INFO  HomePage:26 - Home Page is dispalyed
+2019-05-14 17:25:42 INFO  HomePage:39 - Navigated to Signup Page and Username Text Box is displayed
+2019-05-14 17:25:42 INFO  SignupPage:42 - Enter Username
+2019-05-14 17:25:42 INFO  SignupPage:45 - Enter Password
+2019-05-14 17:25:43 INFO  SignupPage:48 - Enter email
+2019-05-14 17:25:43 INFO  SignupPage:51 - Enter firstname
+2019-05-14 17:25:43 INFO  SignupPage:54 - Enter lastname
+2019-05-14 17:25:47 INFO  SignupPage:69 - Clicked Signup Button
+2019-05-14 17:25:53 INFO  PopUpPage:26 - Clicked close Option
+2019-05-14 17:25:53 INFO  CommonUtils:60 - Waiting for element to be visible....
+2019-05-14 17:26:07 INFO  CommonUtils:63 - Element found
+2019-05-14 17:26:07 INFO  CommonUtils:73 - Waiting for element to be visible and Clickable....
+2019-05-14 17:26:20 INFO  DashboardPage:32 - Click on plans And Pricing Option
+2019-05-14 17:26:20 INFO  CommonUtils:60 - Waiting for element to be visible....
+2019-05-14 17:26:20 INFO  CommonUtils:63 - Element found
+2019-05-14 17:26:28 INFO  PlansAndPricingPage:30 - individual Plans Action Option
+2019-05-14 17:26:28 INFO  CommonUtils:60 - Waiting for element to be visible....
+2019-05-14 17:26:28 INFO  CommonUtils:63 - Element found
+2019-05-14 17:26:42 INFO  PlansAndPricingPage:45 - select Plan
+2019-05-14 17:26:43 INFO  PremierAnnualPage:56 - Entered firstname
+2019-05-14 17:26:43 INFO  PremierAnnualPage:59 - Entered lastname
+2019-05-14 17:26:43 INFO  PremierAnnualPage:61 - Click on Dropdown of States
+2019-05-14 17:26:44 INFO  PremierAnnualPage:63 - Click on States Options
+2019-05-14 17:26:44 INFO  PremierAnnualPage:65 - Click on Next Button
+2019-05-14 17:26:45 INFO  PremierAnnualPage:80 - Entered name on credit card`
+2019-05-14 17:26:46 INFO  PremierAnnualPage:83 - Entered credit Card Number
+2019-05-14 17:26:46 INFO  PremierAnnualPage:86 - Entered expiryDate
+2019-05-14 17:26:46 INFO  PremierAnnualPage:89 - Entered credit Card Verification Number
+2019-05-14 17:26:46 INFO  PremierAnnualPage:91 - Click on Next Button
+2019-05-14 17:26:46 INFO  CommonUtils:60 - Waiting for element to be visible....
+2019-05-14 17:26:46 INFO  CommonUtils:63 - Element found
+2019-05-14 17:26:47 INFO  PremierAnnualPage:94 - Click on Confirm Button
+2019-05-14 17:27:06 INFO  CommonUtils:60 - Waiting for element to be visible....
+2019-05-14 17:27:06 INFO  CommonUtils:63 - Element found
+2019-05-14 17:27:06 INFO  CommonUtils:73 - Waiting for element to be visible and Clickable....
+2019-05-14 17:27:06 INFO  ThankyouPaymentPage:28 - Clicked go To Dashboard Button
+2019-05-14 17:27:08 INFO  CommonUtils:60 - Waiting for element to be visible....
+2019-05-14 17:27:13 INFO  CommonUtils:63 - Element found
+2019-05-14 17:27:13 INFO  CommonUtils:73 - Waiting for element to be visible and Clickable....
+2019-05-14 17:27:14 INFO  DashboardPage:48 - Click on MainMenu
+2019-05-14 17:27:16 INFO  CommonUtils:60 - Waiting for element to be visible....
+2019-05-14 17:27:16 INFO  CommonUtils:63 - Element found
+2019-05-14 17:27:16 INFO  CommonUtils:73 - Waiting for element to be visible and Clickable....
+2019-05-14 17:27:27 INFO  DashboardPage:66 - Click on  my Account Option
+2019-05-14 17:27:27 INFO  CommonUtils:60 - Waiting for element to be visible....
+2019-05-14 17:27:27 INFO  CommonUtils:63 - Element found
+2019-05-14 17:27:27 INFO  CommonUtils:73 - Waiting for element to be visible and Clickable....
+2019-05-14 17:27:39 INFO  MyAccountPage:25 - billing Details Option
+2019-05-14 17:27:39 INFO  BillingDetailsPage:32 - Plan Type is not same
+2019-05-14 17:27:39 INFO  BillingDetailsPage:38 - Billing Amount is same

@@ -1,10 +1,12 @@
 package com.surveymonkey.pom;
-
+import org.apache.log4j.Logger;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
-import org.testng.Reporter;
+import org.testng.Assert;
 
 public class ThankyouPaymentPage {
+
+	private static Logger log = Logger.getLogger(ThankyouPaymentPage.class.getName());
 
 	@FindBy(xpath="//a[contains(text(),'GO TO DASHBOARD')]")
 	static WebElement goToDashboardButton;
@@ -19,14 +21,11 @@ public class ThankyouPaymentPage {
 	 */
 	public static void clickGoToDashboardButton()
 	{
-		try {
-			Thread.sleep(7000);
-		} catch (InterruptedException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
+		Assert.assertTrue(goToDashboardButton.isDisplayed());
+		CommonUtils.waitForElementToBeVisible(goToDashboardButton);
+		CommonUtils.waitForElementToBeClickable(goToDashboardButton);
 		goToDashboardButton.click();
-		Reporter.log("Clicked go To Dashboard Button", true);
+		log.info("Clicked go To Dashboard Button");
 
 	}
 

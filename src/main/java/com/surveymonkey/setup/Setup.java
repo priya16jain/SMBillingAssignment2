@@ -19,8 +19,9 @@ public class Setup {
 	public static ChromeDriver driver;
 	static String baseurl = "https://www.monkeytest1.com";
 	
-	   public static void testSetup() {
+       public static void testSetup() {
 		driver= Driver.getChromeDriver();
+		
 		PageFactory.initElements(driver, HomePage.class);
 		PageFactory.initElements(driver, SignupPage.class);
 		PageFactory.initElements(driver, PopUpPage.class);
@@ -32,10 +33,9 @@ public class Setup {
 		PageFactory.initElements(driver, BillingDetailsPage.class);
 		driver.manage().timeouts().implicitlyWait(120, TimeUnit.SECONDS);
 		driver.manage().window().maximize();
-		driver.get(baseurl);	
-		HomePage.navigateToHomePage();
+		driver.get(baseurl);
 	}
-	
+
 	public static void testTearDown() {
 		driver.close();
 		Reporter.log("Closed browser");
